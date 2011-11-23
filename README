@@ -4,6 +4,13 @@ Arch Linux ARM on their HP TouchPads.
 If you're interested in building everything from the ground up, see
 "building.txt".
 
+CREDITS
+=======
+- jcsullins and everyone from moboot
+- jeanfrancisroy and Funtoo, for making LVM work!
+- s7mx1 from XDA for this post: http://forum.xda-developers.com/showthread.php?t=1332629
+- slashbeast for the basis of the Arch Linux ARM initramfs: https://github.com/slashbeast/better-initramfs
+
 QUICK START
 ===========
 
@@ -27,3 +34,16 @@ though. You should also have uImage.moboot and uImage.webOS in there if
 you've been following along.
 
 - Reboot. Welcome to Arch Linux ARM on the HP TouchPad!
+
+FAQ
+===
+- What does uImage.ArchLinuxARM do?
++ uImage.ArchLinuxARM is a kernel and minimal environment to boot Arch Linux ARM.
++ When moboot 0.3.5 is released, we will most likely have to rebuilt this.
+
+- How do I interact with the TouchPad?
++ A USB OTG *host* adapter and a *powered* USB hub, with a keyboard. Amazon has one here:
++ http://www.amazon.com/gp/product/B005GGBYJ4/
+
+- Nothing works!
++ We know, this is an alpha developer preview. Hopefully others can help us out!

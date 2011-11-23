@@ -10,8 +10,7 @@ WHAT YOU'LL NEED
 - A Linux Box (x86 or x86_64)
 - Git
 - Your distro's "uboot-mkimage" or "uboot-envtools" package installed
-- CodeSourcery's Toolchain:
-  https://sourcery.mentor.com/sgpp/lite/arm/portal/release1294
+- CodeSourcery's Toolchain (link below)
 - Moboot 0.3.4v or later installed on your TouchPad. Do not use ACME.
   
 BUILDING
@@ -20,16 +19,17 @@ First, we'll install the CodeSourcery toolchain.
 Second, we'll build the initramfs.
 Third, we'll build the kernel.
 Finally, we'll boot it.
-https://github.com/CyanogenMod/hp-kernel-tenderloin.git
 
 INSTALL CODESOURCERY
 ====================
 Download the "IA32 GNU/Linux Installer" here:
 https://sourcery.mentor.com/sgpp/lite/arm/portal/release1294
+
 Chmod +x the file and run it. Install it, using defaults. It should be
 placed into /home/youruser/CodeSourcery. Assuming it is, add the "bin"
 folder to your PATH with:
 export PATH=/home/youruser/CodeSourcery/Sourcery_G++_Lite/bin:$PATH
+
 Test to see if it works by running "arm-none-eabi-ar". The command
 should be found. If not, your PATH is wrong.
 

@@ -33,5 +33,35 @@ export PATH=/home/youruser/CodeSourcery/Sourcery_G++_Lite/bin:$PATH
 Test to see if it works by running "arm-none-eabi-ar". The command
 should be found. If not, your PATH is wrong.
 
+GET THE KERNEL SOURCE
+=====================
+This is the CyanogenMod kernel for Android at the moment.
+git clone https://github.com/CyanogenMod/hp-kernel-tenderloin.git
+
 BUILDING THE INITRAMFS
 ======================
+"better-initramfs" is a simple way to build an initramfs to load LVM
+and switch into Arch Linux ARM after LVM is all set up. See
+better-initramfs/sourceroot/init for our init script. Everything in
+sourceroot gets packed up into the initramfs.
+
+To pack up an initramfs, run "make image" from inside the
+better-initramfs directory. This will generate a "initramfs.cpio.gz".
+Next, move the "initramfs.cpio.gz" file to your kernel directory,
+"hp-kernel-tenderloin".
+
+BUILDING THE KERNEL
+===================
+Run the following from within the "hp-kernel-tenderloin" directory:
+
+make ARCH=arm CROSS_COMPILE=arm-none-eabi- clean
+make ARCH=arm CROSS_COMPILE=arm-none-eabi- mrproper
+make ARCH=arm CROSS_COMPILE=arm-none-eabi- tenderloin_android_defconfig
+make ARCH=arm CROSS_COMPILE=arm-none-eabi- uImage -j5
+mkimage -A arm -O linux -T ramdisk -C none -a 0x60000000 -e 0x60000000 -n "Image" -d ./initramfs.cpio.gz arch/arm/boot/uRamdisk
+mkimage -A arm -O linux -T multi -a 0x40208000  -e  0x40208000 -C none -n "multi image" -d arch/arm/boot/uImage:arch/arm/boot/uRamdisk uImage.ArchLinuxARM
+
+This will create a file named uImage.ArchLinuxARM. This is the file
+you'll copy into your TouchPad's /boot/ directory.
+
+That's all!

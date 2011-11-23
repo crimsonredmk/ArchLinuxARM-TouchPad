@@ -1,0 +1,3 @@
+initramfs.cpio.gz
+!*.keep
+sourceroot/config

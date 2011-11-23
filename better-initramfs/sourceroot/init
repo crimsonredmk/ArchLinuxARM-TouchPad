@@ -1,0 +1,33 @@
+#!/bin/sh
+# -*- mode: shell-script; coding: utf-8-emacs-unix; sh-basic-offset: 8; indent-tabs-mode: t -*-
+# This code is under Simplified BSD License, see LICENSE for more info
+# Copyright (c) 2010, Piotr Karbowski
+# All rights reserved.
+#
+# This code is taken from https://github.com/slashbeast/better-initramfs
+# and stripped down (by Arch Linux ARM) to the be tiny and easy to read.
+
+PATH=/bin:/sbin:/usr/bin:/usr/sbin
+/bin/busybox --install -s
+root=/dev/mapper/store-archlinuxarm
+
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+mount -t tmpfs -o nosuid,relatime,size=10240k,mode=755 dev /dev
+
+touch /etc/mdev.conf
+echo /sbin/mdev > /proc/sys/kernel/hotplug
+mdev -s
+
+rm -rf /etc/lvm/cache
+lvm vgchange -a y
+sleep 3
+lvm vgmknodes
+ls /dev/mapper
+
+mount /dev/mapper/store-archlinuxarm -t ext3 /newroot
+mount --move /dev /newroot/dev
+umount /sys
+umount /proc
+
+exec switch_root /newroot /sbin/init

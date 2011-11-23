@@ -1,0 +1,11 @@
+* Support Remote Rescue Shell [dropbear ssh] - ON HOLD, minor.
+* Support loadable kernel modules. - ON HOLD, minor
+* Support for key on external device (enc_keydev and enc_keyfile).
+* When there is luks enabled, but not lvm and there is no root=, use /dev/mapper/enc_root
+* Support for squashfs in root variable, example: root=SQUASHFS=livecd.img
+* Support for aufs2-based rootfs (livesystem). Useful for debuging and liveUSB/CD.
+* Support for keymaps.
+* Support BTRFS's subvolumes.
+* Remove unnecessary bashism from code.
+* Write proper readme.
+* Prepare build scripts for busybox and friends for people who do not use gentoo.

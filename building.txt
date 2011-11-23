@@ -1,0 +1,1 @@
+https://github.com/CyanogenMod/hp-kernel-tenderloin.git

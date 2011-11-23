@@ -1,1 +1,29 @@
-Hi there.
+This is a quick-start guide for people in a hurry who just want to run
+Arch Linux ARM on their HP TouchPads.
+
+If you're interested in building everything from the ground up, see
+"building.txt".
+
+QUICK START
+===========
+
+- You will need:
+  A TouchPad
+  A USB micro cable
+  HP's webOS SDK installed (with novacom and novaterm)
+  To read the whole guide before starting
+
+- Install moboot 0.3.4v (0.3.5 is coming soon) on the TouchPad. Don't touch
+or even think about using ACMEInstaller. Just do it by hand in novaterm.
+Note that this guide was written with 0.3.4v and likely won't work on 0.3.4.
+
+- Make an LVM partition for Arch Linux ARM. See "LVM.txt" for how.
+
+- Mount the archlinuxarm partition somewhere and extract the armv5te rootfs
+to it, not into a subfolder. Hint: /media/internal is the USB-mounted storage.
+
+- Move uImage.ArchLinuxARM to /boot. You'll need to mount /boot rw first
+though. You should also have uImage.moboot and uImage.webOS in there if
+you've been following along.
+
+- Reboot. Welcome to Arch Linux ARM on the HP TouchPad!

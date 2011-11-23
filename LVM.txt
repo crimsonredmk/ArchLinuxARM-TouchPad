@@ -1,0 +1,6 @@
+Running this in novaterm will resize your media space and create a partition
+for Arch Linux ARM.
+
+lvm.static lvresize -L -1706M /dev/store/media
+lvm.static lvcreate -L 1706M -n archlinuxarm store
+mkfs.ext3 /dev/store/archlinuxarm

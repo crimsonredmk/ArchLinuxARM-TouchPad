@@ -44,6 +44,8 @@ FAQ
 - How do I interact with the TouchPad?
 + A USB OTG *host* adapter and a *powered* USB hub, with a keyboard. Amazon has one here:
 + http://www.amazon.com/gp/product/B005GGBYJ4/
++ EDIT: Looks like you'll need this item too. It's significance is explained in the
++ "usage.txt" file: http://www.amazon.com/gp/product/B000JIOHDE/
 
 - How do I reboot the TouchPad?
 + Hold the top button and center button for about 15 seconds.

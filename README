@@ -33,6 +33,9 @@ to it, not into a subfolder. Hint: /media/internal is the USB-mounted storage.
 though. You should also have uImage.moboot and uImage.webOS in there if
 you've been following along.
 
+- READ USAGE.TXT!!! You'll have to copy in stuff manually. This will all be
+streamlined sooner or later.
+
 - Reboot. Welcome to Arch Linux ARM on the HP TouchPad!
 
 FAQ

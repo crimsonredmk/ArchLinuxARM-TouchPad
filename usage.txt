@@ -38,3 +38,45 @@ other into the TouchPad's OTG adapter cable. Plug in a keyboard or hub
 into the Y-cable's female end.
 
 It's magic, really.
+
+INSTALLING THE MODULES (required)
+=================================
+Extract the ALARM-modpack.tar.gz file from Github into your ALARM rootfs.
+This should create /lib/modules/2.6.35-palm-tenderloin/
+
+TURNING ON WIFI (Ugly but works, for now)
+=========================================
+We don't include the wireless_tools package with the armv5te rootfs by
+default, so you'll need to grab it from http://archlinuxarm.org/arm/core/
+Stick it into the ALARM rootfs somehow (mount /dev/store/archlinuxarm...)
+from webOS. Also grab the following files from webOS and copy them to your
+ALARM rootfs:
+
+/lib/firmware/a6_firmware.txt.*
+/lib/firmware/ath6k/*
+/lib/modules/2.6.35-palm-tenderloin/kernel/net/wifi/ar6000.ko
+
+Copy everything into ALARM so as to keep the original directory structure.
+This might be a good time to remind you that you should have already extracted
+the ALARM-modpack.tar.gz archive into your ALARM installation, so you should
+have /lib/modules/2.6.35-palm-tenderloin present already.
+
+With everything copied into place, reboot and do:
+insmod /lib/modules/2.6.35-palm-tenderloin/kernel/net/wifi/ar6000.ko
+
+Modprobe loads a bad ar6000.ko for the moment (FIXME).
+
+You should have seen some output.
+
+Next, install wireless_tools with pacman -U name-of-package.pkg.tar.xz.
+
+And now you're all set. wpa_supplicant is included and can connect to WPA2
+just fine.
+
+FIX UDEV (you MUST do this until we do it for you)
+==================================================
+pacman -Sy udev-oxnas #yes, replace it, and reboot afterwards!
+rm -rf /var/log/*
+
+This is because udev spews gigabytes of crap to logs and you'll be out of
+space in about 3 minutes.

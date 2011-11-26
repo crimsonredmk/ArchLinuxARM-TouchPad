@@ -1,3 +1,8 @@
+Logging In
+==========
+Username: root
+Password: root
+
 Using Arch Linux ARM on the HP TouchPad
 =======================================
 

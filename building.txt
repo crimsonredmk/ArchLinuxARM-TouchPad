@@ -56,10 +56,16 @@ Run the following from within the "hp-kernel-tenderloin" directory:
 
 make ARCH=arm CROSS_COMPILE=arm-none-eabi- clean
 make ARCH=arm CROSS_COMPILE=arm-none-eabi- mrproper
-make ARCH=arm CROSS_COMPILE=arm-none-eabi- tenderloin_android_defconfig
+make ARCH=arm CROSS_COMPILE=arm-none-eabi- tenderloin_defconfig
+make ARCH=arm CROSS_COMPILE=arm-none-eabi- menuconfig # SEE BELOW!
 make ARCH=arm CROSS_COMPILE=arm-none-eabi- uImage -j5
 mkimage -A arm -O linux -T ramdisk -C none -a 0x60000000 -e 0x60000000 -n "Image" -d ./initramfs.cpio.gz arch/arm/boot/uRamdisk
 mkimage -A arm -O linux -T multi -a 0x40208000  -e  0x40208000 -C none -n "multi image" -d arch/arm/boot/uImage:arch/arm/boot/uRamdisk uImage.ArchLinuxARM
+
+For the menuconfig, go to Drivers -> Staging -> Android and enable everything.
+Yeah, it doesn't make sense, but it works.
+Then go to Drivers -> Multimedia and disable everything, at least for now.
+V4L2 isn't building (FIXME) so we'll disable it (and the camera won't work).
 
 This will create a file named uImage.ArchLinuxARM. This is the file
 you'll copy into your TouchPad's /boot/ directory.

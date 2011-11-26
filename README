@@ -66,3 +66,9 @@ FAQ
 
 - Nothing works!
 + We know, this is an alpha developer preview. Hopefully others can help us out!
+
+- How do I remove Arch Linux ARM/Android/CyanogenMod?
++ Back on webOS, run the command "lvm" from novaterm. From there, the command "lvs"
++ show you your logical volumes. Delete any you don't want, e.g. archlinuxarm or cm-data, etc.
++ by running lvremove store/name-of-volume. Then, resize your media partition with
++ lvresize -L +90000M store/media (this will make "media" as big as possible).

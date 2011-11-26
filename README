@@ -38,6 +38,16 @@ streamlined sooner or later.
 
 - Reboot. Welcome to Arch Linux ARM on the HP TouchPad!
 
+TODO
+====
+- Fix Xorg colors and fuzziness (CyanogenMod did it...)
+- Enable touch input
+- Fix V4L2 building in the kernel so the camera will work
+- Include wireless_tools in the default installation
+- Include modpack.tar.gz in the default installation
+- Fix ar6000.ko to work from the kernel sources, not from webOS
+- Write a bash script to do all of it from webOS
+
 FAQ
 ===
 - What does uImage.ArchLinuxARM do?

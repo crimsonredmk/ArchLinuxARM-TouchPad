@@ -20,9 +20,8 @@ QUICK START
   HP's webOS SDK installed (with novacom and novaterm)
   To read the whole guide before starting
 
-- Install moboot 0.3.4v (0.3.5 is coming soon) on the TouchPad. Don't touch
+- Install moboot 0.3.5 on the TouchPad. Don't touch
 or even think about using ACMEInstaller. Just do it by hand in novaterm.
-Note that this guide was written with 0.3.4v and likely won't work on 0.3.4.
 
 - Make an LVM partition for Arch Linux ARM. See "LVM.txt" for how.
 
@@ -40,7 +39,7 @@ streamlined sooner or later.
 
 TODO
 ====
-- Fix Xorg colors and fuzziness (CyanogenMod did it...)
+- Fix Xorg colors and fuzziness (CyanogenMod did it...) (see https://www.codeaurora.org/gitweb/quic/xwin/?p=xf86-video-msm.git;a=summary)
 - Enable touch input
 - Fix V4L2 building in the kernel so the camera will work
 - Replace "udev" with working "udev-oxnas" package
@@ -52,8 +51,7 @@ TODO
 FAQ
 ===
 - What does uImage.ArchLinuxARM do?
-+ uImage.ArchLinuxARM is a kernel and minimal environment to boot Arch Linux ARM.
-+ When moboot 0.3.5 is released, we will most likely have to rebuild this.
++ uImage.ArchLinuxARM is a kernel and minimal environment to boot Arch Linux ARM, compatible with Moboot 0.3.5 and up.
 
 - How do I interact with the TouchPad?
 + A USB OTG *host* adapter and a *powered* USB hub, with a keyboard. Amazon has one here:
@@ -62,7 +60,7 @@ FAQ
 + "usage.txt" file: http://www.amazon.com/gp/product/B000JIOHDE/
 
 - How do I reboot the TouchPad?
-+ Hold the top button and center button for about 15 seconds.
++ Hold the top button and center button for about 15 seconds, or use the usual "reboot" command.
 
 - Nothing works!
 + We know, this is an alpha developer preview. Hopefully others can help us out!

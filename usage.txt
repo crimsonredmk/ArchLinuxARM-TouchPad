@@ -44,6 +44,10 @@ into the Y-cable's female end.
 
 It's magic, really.
 
+Here are the parts that I have confirmed working, as has jcsullins:
+http://www.amazon.com/gp/product/B005GGBYJ4/
+http://www.amazon.com/gp/product/B000JIOHDE/
+
 INSTALLING THE MODULES (required)
 =================================
 Extract the ALARM-modpack.tar.gz file from Github into your ALARM rootfs.

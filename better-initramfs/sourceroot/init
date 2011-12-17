@@ -9,7 +9,7 @@
 
 PATH=/bin:/sbin:/usr/bin:/usr/sbin
 /bin/busybox --install -s
-root=/dev/mapper/store-root-arch
+root=/dev/mapper/store-arch-root
 
 mount -t proc proc /proc
 mount -t sysfs sysfs /sys
@@ -24,7 +24,7 @@ lvm vgchange -a y
 sleep 2
 lvm vgmknodes
 
-mount /dev/mapper/store-root-arch -t ext3 /newroot
+mount /dev/mapper/store-arch-root -t ext3 /newroot
 mount --move /dev /newroot/dev
 umount /sys
 umount /proc

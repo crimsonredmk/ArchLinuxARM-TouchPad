@@ -39,13 +39,10 @@ streamlined sooner or later.
 
 TODO
 ====
-- Fix Xorg colors and fuzziness (CyanogenMod did it...) (see https://www.codeaurora.org/gitweb/quic/xwin/?p=xf86-video-msm.git;a=summary)
-- Enable touch input
 - Fix V4L2 building in the kernel so the camera will work
-- Replace "udev" with working "udev-oxnas" package
-- Include wireless_tools in the default installation
+- Replace "udev" with working "udev-oxnas" package by default
+- Include wicd or some wireless configurator
 - Include modpack.tar.gz in the default installation
-- Fix ar6000.ko to work from the kernel sources, not from webOS
 - Write a bash script to do all of it from webOS
 
 FAQ

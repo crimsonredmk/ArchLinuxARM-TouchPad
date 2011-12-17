@@ -1,6 +1,6 @@
 Running this in novaterm while booted into webOS will resize your media space and create a partition
-for Arch Linux ARM that is 1706MB. This can really be any size larger than 1GB. Run each line individually.
+for Arch Linux ARM that is 2048MB. This can really be any size larger than 1GB. Run each line individually.
 
-lvm.static lvresize -L -1706M /dev/store/media
-lvm.static lvcreate -L 1706M -n archlinuxarm store
-mkfs.ext3 /dev/store/archlinuxarm
+lvm.static lvresize -L -2048M /dev/store/media
+lvm.static lvcreate -L 2048M -n root-arch store
+mkfs.ext3 /dev/store/root-arch

@@ -20,13 +20,12 @@ QUICK START
   HP's webOS SDK installed (with novacom and novaterm)
   To read the whole guide before starting
 
-- Install moboot 0.3.5 on the TouchPad. Don't touch
-or even think about using ACMEInstaller. Just do it by hand in novaterm.
+- Install moboot 0.3.5 on the TouchPad. Don't use ACMEInstaller. Just do it by hand in novaterm.
 
 - Make an LVM partition for Arch Linux ARM. See "LVM.txt" for how.
 
-- Mount the archlinuxarm partition somewhere and extract the armv5te rootfs
-to it, not into a subfolder. Hint: /media/internal is the USB-mounted storage.
+- Mount the arch-root partition somewhere and extract the rootfs to it, 
+not into a subfolder.
 
 - Move uImage.ArchLinuxARM to /boot. You'll need to mount /boot rw first
 though. You should also have uImage.moboot and uImage.webOS in there if
@@ -40,23 +39,17 @@ streamlined sooner or later.
 TODO
 ====
 - Fix V4L2 building in the kernel so the camera will work
-- Replace "udev" with working "udev-oxnas" package by default
-- Include wicd or some wireless configurator
-- Include modpack.tar.gz in the default installation
-- Write a bash script to do all of it from webOS
+- Fix wicd to recognize eth0 as WiFi
 
 FAQ
 ===
 - What does uImage.ArchLinuxARM do?
-+ uImage.ArchLinuxARM is a kernel and minimal environment to boot Arch Linux ARM, compatible with Moboot 0.3.5 and up.
++ uImage.ArchLinuxARM is a kernel and minimal environment to boot Arch Linux ARM, compatible with moboot 0.3.5 and up.
 
 - How do I interact with the TouchPad?
-+ A USB OTG *host* adapter and a *powered* USB hub, with a keyboard. Amazon has one here:
-+ http://www.amazon.com/gp/product/B005GGBYJ4/
-+ EDIT: Looks like you'll need this item too. It's significance is explained in the
-+ "usage.txt" file: http://www.amazon.com/gp/product/B000JIOHDE/
++ See "usage.txt".
 
-- How do I reboot the TouchPad?
+- How do I force reboot the TouchPad?
 + Hold the top button and center button for about 15 seconds, or use the usual "reboot" command.
 
 - Nothing works!

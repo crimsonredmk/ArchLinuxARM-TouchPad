@@ -70,8 +70,8 @@ tar czf ALARM-modpack.tar.gz modpack/lib
 
 For the menuconfig, go to Drivers -> Staging -> Android and enable everything.
 Yeah, it doesn't make sense, but it works.
-Then go to Drivers -> Multimedia and disable everything, at least for now.
-V4L2 isn't building (FIXME) so we'll disable it (and the camera won't work).
+Then go to Drivers -> Multimedia and disable everything under V4L, at least for now.
+V4L isn't building so we'll disable it (and the camera won't work).
 
 This will create a file named uImage.ArchLinuxARM. This is the file
 you'll copy into your TouchPad's /boot/ directory.

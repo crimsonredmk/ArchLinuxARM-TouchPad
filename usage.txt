@@ -3,24 +3,34 @@ Logging In
 Username: root
 Password: root
 
+Username: linux
+Password: linux
+
+TURNING ON WIFI (Ugly but works, for now)
+=========================================
+WiFi is turned on by default, as eth0. Wicd doesn't "find" it yet,
+but you can use wpa_supplicant and dhcpcd or whatever you need via the
+Terminal. Read the ArchWiki for how to set it up.
+
+As a reminder, once WiFi is set up, you can do the following to restart SSH
+so you can hack without the expensive cables:
+
+rc.d restart sshd
+
 Using Arch Linux ARM on the HP TouchPad
 =======================================
 
-After installing Arch Linux ARM on the HP TouchPad, you'll need a few
-extra cables to plug in a keyboard/mouse, at least until we develop a
-way to turn on Wi-Fi so you can connect to your TouchPad over SSH or
-VNC to turn on Bluetooth to pair with keyboards.
+By default, you're logged in as the "linux" user into an XFCE4 session
+(until we find something more suitable for tablets). There is an on-screen
+keyboard in Menu -> Accessories -> Keyboard.
 
-But for now, let's talk about the HP TouchPad's microUSB port.
-It has OTG capabilities, but using them is a pain and is much harder
-than you'd expect. A $3 microUSB-to-USB OTG adapter won't work. You
-need to buy an adapter with "host" capabilities. A link to such an
-adapter is given below.
+The HP TouchPad's microUSB port has OTG capabilities, but using them is
+a pain and is much harder than you'd expect. A $3 microUSB-to-USB OTG
+adapter won't work. You need to buy an adapter with "host" capabilities.
+A link to such an adapter is given below.
 
-But, you're not ready yet. You won't like this next paragraph because it
-makes little sense and seems pointless, but you'll need a special
-"Y-cable" to provide power to the TouchPad. A link is given below to a
-known working one.
+But, you're not ready yet. You'll need a special "Y-cable" to provide
+power to the TouchPad. A link is given below to a known working one.
 
 The reasoning behind this is that the TouchPad puts the USB port into
 "low power" sleep mode unless there is current flowing into it. So
@@ -42,50 +52,6 @@ Basically, connect one of the Y-cable's male ends into a PC and the
 other into the TouchPad's OTG adapter cable. Plug in a keyboard or hub
 into the Y-cable's female end.
 
-It's magic, really.
-
 Here are the parts that I have confirmed working, as has jcsullins:
 http://www.amazon.com/gp/product/B005GGBYJ4/
 http://www.amazon.com/gp/product/B000JIOHDE/
-
-INSTALLING THE MODULES (required)
-=================================
-Extract the ALARM-modpack.tar.gz file from Github into your ALARM rootfs.
-This should create /lib/modules/2.6.35-palm-tenderloin/
-
-TURNING ON WIFI (Ugly but works, for now)
-=========================================
-We don't include the wireless_tools package with the armv5te rootfs by
-default, so you'll need to grab it from http://archlinuxarm.org/arm/core/
-Stick it into the ALARM rootfs somehow (mount /dev/store/archlinuxarm...)
-from webOS. Also grab the following files from webOS and copy them to your
-ALARM rootfs:
-
-/lib/firmware/a6_firmware.txt.*
-/lib/firmware/ath6k/*
-/lib/modules/2.6.35-palm-tenderloin/kernel/net/wifi/ar6000.ko
-
-Copy everything into ALARM so as to keep the original directory structure.
-This might be a good time to remind you that you should have already extracted
-the ALARM-modpack.tar.gz archive into your ALARM installation, so you should
-have /lib/modules/2.6.35-palm-tenderloin present already.
-
-With everything copied into place, reboot and do:
-insmod /lib/modules/2.6.35-palm-tenderloin/kernel/net/wifi/ar6000.ko
-
-Modprobe loads a bad ar6000.ko for the moment (FIXME).
-
-You should have seen some output.
-
-Next, install wireless_tools with pacman -U name-of-package.pkg.tar.xz.
-
-And now you're all set. wpa_supplicant is included and can connect to WPA2
-just fine.
-
-FIX UDEV (you MUST do this until we do it for you)
-==================================================
-pacman -Sy udev-oxnas #yes, replace it, and reboot afterwards!
-rm -rf /var/log/*
-
-This is because udev spews gigabytes of crap to logs and you'll be out of
-space in about 3 minutes.

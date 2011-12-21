@@ -2,8 +2,13 @@ Running this in novaterm while booted into webOS will resize your media space an
 for Arch Linux ARM that is 2048MB. This can really be any size larger than 1GB. Run each line individually.
 
 pkill -SIGUSR1 cryptofs
+umount /media/internal
+resizefat /dev/store/media ****M # Where **** is the remaining size of your media partition (see below)
 lvm.static lvresize -L -2048M /dev/store/media
 lvm.static lvcreate -L 2048M -n arch-root store
 mkfs.ext3 /dev/store/arch-root
-umount /media/internal
-resizefat /dev/store/media ****M # Where **** is the remaining size of your media partition
+
+To find the resizefat value, run the following to find your media partition size, then subtract however many
+megabytes you want to give your Arch Linux ARM installation. This is your **** value.
+
+lvm.static lvdisplay -c store/media | awk -F: '{print $7/2048}'

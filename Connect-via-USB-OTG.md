@@ -32,6 +32,7 @@ other into the TouchPad's OTG adapter cable. Plug in a keyboard or hub
 into the Y-cable's female end.
 
 Here are the parts that I have confirmed working:
+
 - http://www.amazon.com/gp/product/B005GGBYJ4/
 
 - http://www.amazon.com/gp/product/B000JIOHDE/

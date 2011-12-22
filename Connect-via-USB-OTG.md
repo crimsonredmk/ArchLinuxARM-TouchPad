@@ -1,4 +1,4 @@
-#### Plugging in a keyboard and mouse ####
+### Plugging in a keyboard and mouse ###
 
 By default, you're logged in as the "linux" user into Gnome.
 There is an on-screen keyboard in Menu -> Accessories -> Keyboard.

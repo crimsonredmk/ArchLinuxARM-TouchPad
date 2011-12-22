@@ -2,7 +2,7 @@
 
 - "novaterm" into the device from your desktop with the webOS SDK installed. You don't need to be in recovery mode or anything special, being on the webOS home screen is just fine.
 
-- Run the following line by line, carefully, in novaterm connected to your TouchPad.
+- Run the following line by line, carefully, in novaterm connected to your TouchPad. This will download and install everything you need. You don't need to download anything else.
 
         mount -o rw,remount /boot
         cd /tmp
@@ -16,6 +16,7 @@
         echo "yes" > moboot.verbose.ArchLinuxARM
         sync
         curl -O http://archlinuxarm.org/mirror/touchpad/uImage.ArchLinuxARM
+        curl -O http://archlinuxarm.org/mirror/touchpad/moboot.splash.ArchLinuxARM.tga
         cd /tmp
         pkill -SIGUSR1 cryptofs
         umount /media/internal

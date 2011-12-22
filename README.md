@@ -1,8 +1,7 @@
 *This is a quick-start guide for people in a hurry who just want to run
 Arch Linux ARM on their HP TouchPad.*
 
-*If you're interested in building everything from the ground up, see
-"building.txt".*
+*If you're interested in building everything from the ground up, see "Building.md".*
 
 ### Credits ###
 - jcsullins and everyone from moboot
@@ -27,6 +26,10 @@ See "Installation.md" for step-by-step instructions.
 - Enable compositing so Gnome Shell will work
 
 ### FAQ ###
+- **What are the passwords for root/su/sudo?**
+
+  Following the username:password convention: root:root and linux:linux.
+
 - **What does uImage.ArchLinuxARM do?**
 
   uImage.ArchLinuxARM is a kernel and minimal environment to boot Arch Linux ARM, compatible with moboot 0.3.5 and up.

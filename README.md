@@ -24,6 +24,7 @@ See "Installation.md" for step-by-step instructions.
 - Fix ALSA and sound
 - Work on the touch support
 - Enable compositing so Gnome Shell will work
+- Matchbox-keyboard does not autostart, maybe it can be replaced with a better keyboard as well?
 
 ### FAQ ###
 - **What are the passwords for root/su/sudo?**

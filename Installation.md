@@ -1,6 +1,6 @@
-- Enable developer mode with "webos20090606" in the Just Type Box. Use no password.
+- Enable developer mode with "webos20090606" in the webOS Just Type Box. Use no password.
 
-- "novaterm" into the device from your desktop with the webOS SDK installed.
+- "novaterm" into the device from your desktop with the webOS SDK installed. You don't need to be in recovery mode or anything special, being on the webOS home screen is just fine.
 
 - Run the following line by line, carefully, in novaterm connected to your TouchPad.
 
@@ -34,8 +34,8 @@
         umount linux
         reboot # The first few times, this may error out - try again
 
-### Resizing FAT webOS partition ###
-To make room on your TouchPad for Arch Linux ARM, you need to take away space from the USB partition (FAT or /media/interal).
+### Resizing the FAT webOS USB partition ###
+To make room for Arch Linux ARM, you need to take away space from the USB partition (FAT or /media/internal/).
 
 Run the following to get the currect size of your FAT partition. Then, subtract the number of megabytes you want to use for Arch Linux ARM.
 

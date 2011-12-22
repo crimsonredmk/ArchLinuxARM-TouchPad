@@ -1,36 +1,24 @@
 Logging In
 ==========
-Username: root
-Password: root
-
 Username: linux
 Password: linux
 
-TURNING ON WIFI (Ugly but works, for now)
-=========================================
-WiFi is turned on by default, as eth0. Wicd doesn't "find" it yet,
-but you can use wpa_supplicant and dhcpcd or whatever you need via the
-Terminal. Read the ArchWiki for how to set it up.
+Username: root
+Password: root
 
-As a reminder, once WiFi is set up, you can do the following to restart SSH
-so you can hack without the expensive cables:
+Plugging in a keyboard and mouse
+================================
 
-rc.d restart sshd
-
-Using Arch Linux ARM on the HP TouchPad
-=======================================
-
-By default, you're logged in as the "linux" user into an XFCE4 session
-(until we find something more suitable for tablets). There is an on-screen
-keyboard in Menu -> Accessories -> Keyboard.
+By default, you're logged in as the "linux" user into Gnome.
+There is an on-screen keyboard in Menu -> Accessories -> Keyboard.
 
 The HP TouchPad's microUSB port has OTG capabilities, but using them is
 a pain and is much harder than you'd expect. A $3 microUSB-to-USB OTG
 adapter won't work. You need to buy an adapter with "host" capabilities.
 A link to such an adapter is given below.
 
-But, you're not ready yet. You'll need a special "Y-cable" to provide
-power to the TouchPad. A link is given below to a known working one.
+You'll also need a special "Y-cable" to provide power to the TouchPad.
+A link is given below to a known working one.
 
 The reasoning behind this is that the TouchPad puts the USB port into
 "low power" sleep mode unless there is current flowing into it. So
@@ -52,6 +40,6 @@ Basically, connect one of the Y-cable's male ends into a PC and the
 other into the TouchPad's OTG adapter cable. Plug in a keyboard or hub
 into the Y-cable's female end.
 
-Here are the parts that I have confirmed working, as has jcsullins:
+Here are the parts that I have confirmed working:
 http://www.amazon.com/gp/product/B005GGBYJ4/
 http://www.amazon.com/gp/product/B000JIOHDE/

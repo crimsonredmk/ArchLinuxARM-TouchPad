@@ -18,18 +18,7 @@ Arch Linux ARM on their HP TouchPad.*
 - To read the whole guide before starting
 
 #### Installation ####
-- Install moboot 0.3.5 on the TouchPad. Don't use ACMEInstaller. Just do it by hand in novaterm.
-
-- Make an LVM partition for Arch Linux ARM. See "LVM.txt" for how.
-
-- Mount the arch-root partition somewhere and extract the rootfs to it, 
-not into a subfolder.
-
-- Move uImage.ArchLinuxARM to /boot. You'll need to mount /boot rw first
-though. You should also have uImage.moboot and uImage.webOS in there if
-you've been following along.
-
-- Reboot. Welcome to Arch Linux ARM on the HP TouchPad!
+See "Installation.md" for step-by-step instructions.
 
 ### Todo ###
 - Fix V4L2 building in the kernel so the camera will work

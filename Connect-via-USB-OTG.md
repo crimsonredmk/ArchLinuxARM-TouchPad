@@ -1,13 +1,4 @@
-Logging In
-==========
-Username: linux
-Password: linux
-
-Username: root
-Password: root
-
-Plugging in a keyboard and mouse
-================================
+#### Plugging in a keyboard and mouse ####
 
 By default, you're logged in as the "linux" user into Gnome.
 There is an on-screen keyboard in Menu -> Accessories -> Keyboard.
@@ -21,7 +12,7 @@ You'll also need a special "Y-cable" to provide power to the TouchPad.
 A link is given below to a known working one.
 
 The reasoning behind this is that the TouchPad puts the USB port into
-"low power" sleep mode unless there is current flowing into it. So
+"low power" mode unless there is current flowing into it. So
 plugging in an OTG cable and a keyboard or even a powered hub won't
 work because you have no way of providing power to the USB port on the
 TouchPad, so the port will stay in sleep mode. The Y-cable solves this

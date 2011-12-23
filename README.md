@@ -9,15 +9,8 @@ Arch Linux ARM on their HP TouchPad.*
 - s7mx1 from XDA for this post: http://forum.xda-developers.com/showthread.php?t=1332629
 - slashbeast for the basis of the ALARM initramfs: https://github.com/slashbeast/better-initramfs
 
-### Quick Start ###
-#### You will need: ####
-- A TouchPad
-- A USB micro cable
-- HP's webOS SDK installed (with novacom and novaterm)
-- To read the whole guide before starting
-
-#### Installation ####
-See "Installation.md" for step-by-step instructions.
+### Installation ###
+See "Installation.md" for step-by-step instructions. Make sure you have the webOS SDK with novacom/novaterm installed.
 
 ### Todo ###
 - Fix V4L2 building in the kernel so the camera will work

@@ -22,6 +22,7 @@ See "Installation.md" for step-by-step instructions.
 ### Todo ###
 - Fix V4L2 building in the kernel so the camera will work
 - Fix ALSA and sound
+- Make Bluetooth work (and then fix the mouse pointer hiding)
 - Work on the touch support
 - Enable compositing so Gnome Shell will work
 - Matchbox-keyboard does not autostart, maybe it can be replaced with a better keyboard as well?
@@ -31,13 +32,9 @@ See "Installation.md" for step-by-step instructions.
 
   Following the username:password convention: root:root and linux:linux.
 
-- **What does uImage.ArchLinuxARM do?**
-
-  uImage.ArchLinuxARM is a kernel and minimal environment to boot Arch Linux ARM, compatible with moboot 0.3.5 and up.
-
 - **How do I force reboot the TouchPad?**
 
-  Hold the top button and center button for about 15 seconds, or use the usual "sudo reboot" command.
+  Hold the top button and center button for about 15 seconds, or use the usual "sudo reboot" command.  
 
 - **How do I remove Arch Linux ARM/Android/CyanogenMod?**
 
@@ -45,3 +42,8 @@ See "Installation.md" for step-by-step instructions.
   shows the logical volumes. Delete any you don't want, e.g. archlinuxarm or cm-data, etc.
   by running "lvremove store/name-of-volume". Then, resize your media partition with
   "lvresize -L +90000M store/media" (this will make "media" as big as possible).
+  
+- **How can I help?**
+
+  Right now, installing and testing the alpha would be nice. Getting things crossed off the Todo list
+  is what we really need though. Join us in #archlinuxarm on irc.freenode.net as well.

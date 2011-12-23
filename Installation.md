@@ -44,6 +44,6 @@ This number will give you the remaining size of the FAT partition. The resizefat
 
     lvm.static lvdisplay -c store/media | awk -F: '{print $7/2048}'
 
-The 4096MB values for lvm.static above are arbitrary - you'll need at least 2GB (2048MB) to enjoy Arch Linux ARM.
+The 4096MB values for lvm.static above are generous - you'll need at least 3GB to enjoy Arch Linux ARM.
 
 Also, make sure you leave some space for FAT. webOS and webOS applications use it.

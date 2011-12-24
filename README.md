@@ -16,7 +16,6 @@ See "Installation.md" for step-by-step instructions. Make sure you have the webO
 - Fix V4L2 building in the kernel so the camera will work
 - Fix ALSA and sound
 - Make Bluetooth work (and then fix the mouse pointer hiding)
-- Work on the touch support
 - Enable compositing so Gnome Shell will work
 - Matchbox-keyboard does not autostart, maybe it can be replaced with a better keyboard as well?
 

@@ -36,7 +36,7 @@ should be found. If not, your PATH is wrong.
 #### Get the Kernel Source ####
 git clone https://github.com/CyanogenMod/hp-kernel-tenderloin.git
 
-#### BUILDING the initramfs ####
+#### Building the initramfs ####
 "better-initramfs" is a simple way to build an initramfs to load LVM
 and switch into Arch Linux ARM. See better-initramfs/sourceroot/init
 for our init script. Everything in sourceroot gets packed up into the 

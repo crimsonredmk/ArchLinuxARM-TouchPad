@@ -64,7 +64,7 @@ Run the following from within the "hp-kernel-tenderloin" directory:
     mkdir modpack
     make ARCH=arm CROSS_COMPILE=arm-none-eabi- modules -j5
     make INSTALL_MOD_PATH=modpack ARCH=arm CROSS_COMPILE=arm-none-eabi- modules_install
-    mkimage -A arm -O linux -T ramdisk -C none -a 0x60000000 -e 0x60000000 -n "Image" -d ./initramfs.cpio.gz arch/arm/boot/uRamdisk
+    mkimage -A arm -O linux -T ramdisk -C none -a 0x60000000 -e 0x60000000 -n "Image" -d ./img.gz arch/arm/boot/uRamdisk
     mkimage -A arm -O linux -T multi -a 0x40208000 -e 0x40208000 -C none -n "multi image" -d arch/arm/boot/uImage:arch/arm/boot/uRamdisk uImage.ArchLinuxARM
     tar czf ALARM-modpack.tar.gz modpack/lib
 

@@ -76,7 +76,7 @@ building so we'll disable it (and the camera won't work).
 This will create a file named uImage.ArchLinuxARM. This is the file
 you'll copy into your TouchPad's /boot/ directory.
 
-In moboot 0.3.5 you'll also need to run:
+When installing moboot 0.3.5 you'll also need to run:
 echo "yes" > /boot/moboot.verbose.ArchLinuxARM
 
 #### Other Goodies ####

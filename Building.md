@@ -58,7 +58,7 @@ Run the following from within the "hp-kernel-tenderloin" directory:
     make ARCH=arm CROSS_COMPILE=arm-none-eabi- mrproper
     make ARCH=arm CROSS_COMPILE=arm-none-eabi- tenderloin_defconfig
     make ARCH=arm CROSS_COMPILE=arm-none-eabi- menuconfig # SEE BELOW!
-    make ARCH=arm CROSS_COMPILE=arm-none-eabi- uImage -j5
+    make ARCH=arm CROSS_COMPILE=arm-none-eabi- uImage -j5 # number of CPU cores plus 1
     # THE FOLLOWING WILL ONLY WORK AFTER YOU'VE GENERATED A BETTER-INITRAMFS!!!
     mkimage -A arm -O linux -T ramdisk -C none -a 0x60000000 -e 0x60000000 -n "Image" -d ./img.gz arch/arm/boot/uRamdisk
     mkdir modpack

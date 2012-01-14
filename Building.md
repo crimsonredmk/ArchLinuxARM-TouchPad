@@ -28,6 +28,7 @@ https://sourcery.mentor.com/sgpp/lite/arm/portal/release1294
 "Chmod +x" the file and run it. Install it, using defaults. It should be
 placed into /home/youruser/CodeSourcery. Assuming it is, add the "bin"
 folder to your PATH with:
+
     export PATH=/home/youruser/CodeSourcery/Sourcery_G++_Lite/bin:$PATH
 
 Test to see if it works by running "arm-none-eabi-ar". The command

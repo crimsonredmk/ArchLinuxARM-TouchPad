@@ -28,13 +28,13 @@ https://sourcery.mentor.com/sgpp/lite/arm/portal/release1294
 "Chmod +x" the file and run it. Install it, using defaults. It should be
 placed into /home/youruser/CodeSourcery. Assuming it is, add the "bin"
 folder to your PATH with:
-export PATH=/home/youruser/CodeSourcery/Sourcery_G++_Lite/bin:$PATH
+    export PATH=/home/youruser/CodeSourcery/Sourcery_G++_Lite/bin:$PATH
 
 Test to see if it works by running "arm-none-eabi-ar". The command
 should be found. If not, your PATH is wrong.
 
 #### Get the Kernel Source ####
-git clone https://github.com/CyanogenMod/hp-kernel-tenderloin.git
+    git clone https://github.com/CyanogenMod/hp-kernel-tenderloin.git
 
 #### Building the initramfs ####
 "better-initramfs" is a simple way to build an initramfs to load LVM

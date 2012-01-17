@@ -38,4 +38,4 @@ See "Installation.md" for step-by-step instructions. Make sure you have the webO
 - **How can I help?**
 
   Right now, installing and testing the alpha would be nice. Getting things crossed off the Todo list
-  is what we really need though. Join us in #archlinuxarm on irc.freenode.net as well.
+  is what we really need though. Join us in #archlinux-arm on irc.freenode.net as well.

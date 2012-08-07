@@ -46,7 +46,9 @@ initramfs.
 To pack up an initramfs, run "make image" from inside the
 better-initramfs directory. This will generate a "initramfs.cpio.gz".
 Next, move the "initramfs.cpio.gz" file to your kernel directory,
-"hp-kernel-tenderloin".
+"hp-kernel-tenderloin", and name it "img.gz".
+
+You should now have an `hp-kernel-tenderloin/img.gz` file.
 
 ### Patching the Kernel ####
 Grab the patches from http://code.google.com/p/touchpad-dev/ and
